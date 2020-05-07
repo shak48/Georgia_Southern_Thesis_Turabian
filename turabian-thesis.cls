@@ -1,10 +1,10 @@
-% Turabian Formatting for LaTeX
+%Turabian Formatting for LaTeX
 %
 % Based on Kate L. Turabian's "A Manual for Writers of Research Papers, Theses, 
 % and Dissertations," 9th edition.
 %
 % ==============================
-% Edited by Shahriar Kabir to match Georgia Southrn thesis Format 2020 (original  Omar Abdool)
+% Edited by Shahriar Kabir to match Georgia Southern thesis Format 2020 (original  Omar Abdool)
 %
 % This work may be distributed and/or modified under the conditions of the LaTeX
 % Project Public License (LPPL), either version 1.3 of this license or (at your
@@ -15,10 +15,6 @@
 % This work consists of the files: turabian-formatting.sty,
 % turabian-researchpaper.cls, turabian-thesis.cls, turabian-formatting-doc.tex,
 % and turabian-formatting-doc.pdf (in addition to the README file).
-%
-% ==============================
-%
-%
 
 
 \NeedsTeXFormat{LaTeX2e}
@@ -74,10 +70,9 @@
 \RequirePackage{turabian-formatting}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[caption=false]{subfig}
-\RequirePackage{caption}
-\RequirePackage{authoraftertitle,amsmath, booktabs,breqn,comment,csquotes,datetime,ellipsis,float,fancyhdr,graphicx,gensymb,hyperref,latexsym,mathtools,multirow,nomencl,longtable,pdflscape,scrhack,siunitx,tabularx,tabulary,textcase,textcomp,times,titlecaps,verbatim}
-
-
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{authoraftertitle,amsmath, booktabs,breqn,comment,csquotes,datetime,ellipsis,float,fancyhdr,graphicx,gensymb,latexsym,mathtools,multirow,nomencl,longtable,pdflscape,scrhack,siunitx,tabularx,tabulary,textcase,textcomp,times,titlecaps,verbatim}
+\RequirePackage[textformat=simple]{caption}
 
 % Specify paper size with geometry package
 \RequirePackage[pass, letterpaper]{geometry}
@@ -410,7 +405,7 @@ by\\
 \vspace*{0.5\baselineskip}
 \tf@authorinfo\\
 \vspace*{0.5\baselineskip}
-A Thesis Submitted to the Graduate Faculty of \tf@institution in Partial\\
+A Thesis Submitted to the Graduate Faculty of \tf@institution\space in Partial\\
 \vspace*{0.5\baselineskip}
 Fulfillment of the Requirements for the Degree \\
 \vspace*{0.5\baselineskip}
@@ -435,7 +430,7 @@ Fulfillment of the Requirements for the Degree \\
 			\vspace*{0.5\baselineskip}
 			\tf@department\par
             \vspace*{0.5\baselineskip}
-			\tf@location\par
+			%\tf@location\par
 			%\@date
 			\parskip=0pt
 		\end{center}%

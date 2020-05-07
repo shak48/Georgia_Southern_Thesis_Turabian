@@ -2,10 +2,14 @@
 \chapter{{SECOND APPENDIX}}
 
 
-
-\begin{table}[h!]
+\begin{table}[ht]
+\renewcommand{\arraystretch}{1.5}
 \centering
-\begin{tabular}{||c c c c||} 
+\caption%
+ [\titlecap{This is the sample table caption}]
+ {This is the sample table caption.\label{table2}}
+ \begin{tabular}{||c c c c||}
+ 
  \hline
  Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
  \hline\hline
@@ -15,47 +19,7 @@
  4 & 545 & 18744 & 7560 \\
  5 & 88 & 788 & 6344 \\ [1ex] 
  \hline
-\end{tabular}
-\caption
-[\titlecap{Table to test captions and labels}]
-{Table to test captions and labels}
-\label{table:1}
+ \end{tabular}
 \end{table}
 
 
-\begin{longtable}[c]{| c | c |}
- \caption{Long table caption.\label{long}}\\
-
- \hline
- \multicolumn{2}{| c |}{Begin of Table}\\
- \hline
- Something & something else\\
- \hline
- \endfirsthead
-
- \hline
- \multicolumn{2}{|c|}{Continuation of Table \ref{long}}\\
- \hline
- Something & something else\\
- \hline
- \endhead
-
- \hline
- \endfoot
-
- \hline
- \multicolumn{2}{| c |}{End of Table}\\
- \hline\hline
- \endlastfoot
-
- Lots of lines & like this\\
- Lots of lines & like this\\
- Lots of lines & like this\\
- Lots of lines & like this\\
- Lots of lines & like this\\
- Lots of lines & like this\\
- Lots of lines & like this\\
- Lots of lines & like this\\
- ...
- Lots of lines & like this\\
- \end{longtable}

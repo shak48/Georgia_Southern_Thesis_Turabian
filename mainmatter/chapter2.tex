@@ -8,12 +8,14 @@
 \lipsum[1-2]
 
 
-\begin{table}[h!]
+\begin{table}[ht]
+\renewcommand{\arraystretch}{1.5}
 \centering
 \caption%
- [\titlecap{This is the table caption}]
- {This is the table caption.\label{table}}
- \begin{tabular}{||c c c c||} 
+ [\titlecap{This is the sample table caption}]
+ {This is the sample table caption.\label{table}}
+ \begin{tabular}{||c c c c||}
+ 
  \hline
  Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
  \hline\hline
