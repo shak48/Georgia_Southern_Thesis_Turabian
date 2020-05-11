@@ -16,7 +16,6 @@
 % turabian-researchpaper.cls, turabian-thesis.cls, turabian-formatting-doc.tex,
 % and turabian-formatting-doc.pdf (in addition to the README file).
 
-
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{turabian-thesis}[2018/08/01 Turabian Theses and Dissertations]
 
@@ -70,9 +69,11 @@
 \RequirePackage{turabian-formatting}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[caption=false]{subfig}
+\RequirePackage[textformat=simple]{caption}
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{authoraftertitle,amsmath, booktabs,breqn,comment,csquotes,datetime,ellipsis,float,fancyhdr,graphicx,gensymb,latexsym,mathtools,multirow,nomencl,longtable,pdflscape,scrhack,siunitx,tabularx,tabulary,textcase,textcomp,times,titlecaps,verbatim}
-\RequirePackage[textformat=simple]{caption}
+
+
 
 % Specify paper size with geometry package
 \RequirePackage[pass, letterpaper]{geometry}
@@ -405,7 +406,7 @@ by\\
 \vspace*{0.5\baselineskip}
 \tf@authorinfo\\
 \vspace*{0.5\baselineskip}
-A Thesis Submitted to the Graduate Faculty of \tf@institution\space in Partial\\
+A Thesis Submitted to the Graduate Faculty of \tf@institution \space in Partial\\
 \vspace*{0.5\baselineskip}
 Fulfillment of the Requirements for the Degree \\
 \vspace*{0.5\baselineskip}
@@ -454,7 +455,9 @@ Fulfillment of the Requirements for the Degree \\
 
 % Table of Contents: formatting
 \setcounter{tocdepth}{1}
-
+\addtocontents{toc}{\protect{~\hfill{Page}\par\medskip}}
+\addtocontents{lof}{\protect{~\hfill{Page}\par\medskip}}
+\addtocontents{lot}{\protect{~\hfill{Page}\par\medskip}}
 \renewcommand*{\l@part}[2]{%
 	\ifnum \c@tocdepth >-2\relax
 		\addpenalty{-\@highpenalty}%
@@ -514,7 +517,7 @@ Fulfillment of the Requirements for the Degree \\
 
 % List of Figures: formatting
 \renewcommand*\l@figure{%
-	%\vskip \tf@singlelineskip
+	\vskip \tf@singlelineskip
 	\@dottedtocline{0}{\z@}{4em}}
 
 
